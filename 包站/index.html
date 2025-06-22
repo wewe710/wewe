@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>包站 - 视频分享平台</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- 顶部导航栏 -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <i class="fas fa-play-circle"></i>
+                <span>包站</span>
+            </div>
+            <nav class="nav-menu">
+                <a href="#" class="nav-item active">首页</a>
+                <a href="#" class="nav-item">分区</a>
+                <a href="#" class="nav-item">排行榜</a>
+                <a href="#" class="nav-item">动态</a>
+                <a href="#" class="nav-item">会员购</a>
+                <a href="#" class="nav-item">漫画</a>
+                <a href="#" class="nav-item">游戏中心</a>
+                <a href="#" class="nav-item">直播</a>
+            </nav>
+            <div class="search-box">
+                <input type="text" placeholder="搜索视频、番剧、UP主或AV号" id="searchInput">
+                <button class="search-btn">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+            <div class="user-actions">
+                <a href="upload.html" class="upload-btn">
+                    <i class="fas fa-upload"></i>
+                    投稿
+                </a>
+                <div class="user-avatar">
+                    <img src="https://via.placeholder.com/40x40/00a1d6/ffffff?text=U" alt="用户头像">
+                </div>
+            </div>
+            <button class="about-btn" id="aboutBtn" title="关于本站">
+                <i class="fas fa-info-circle"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- 主要内容区域 -->
+    <main class="main-content">
+        <!-- 轮播图区域 -->
+        <section class="banner-section">
+            <div class="banner-container">
+                <div class="banner-slider">
+                    <div class="banner-slide active">
+                        <img src="https://via.placeholder.com/1200x400/00a1d6/ffffff?text=热门推荐" alt="热门推荐">
+                        <div class="banner-info">
+                            <h3>热门推荐视频</h3>
+                            <p>发现更多精彩内容</p>
+                        </div>
+                    </div>
+                    <div class="banner-slide">
+                        <img src="https://via.placeholder.com/1200x400/ff6699/ffffff?text=新番推荐" alt="新番推荐">
+                        <div class="banner-info">
+                            <h3>新番推荐</h3>
+                            <p>最新动漫内容</p>
+                        </div>
+                    </div>
+                    <div class="banner-slide">
+                        <img src="https://via.placeholder.com/1200x400/23ade5/ffffff?text=游戏视频" alt="游戏视频">
+                        <div class="banner-info">
+                            <h3>游戏视频</h3>
+                            <p>精彩游戏内容</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="banner-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 分区导航 -->
+        <section class="category-section">
+            <div class="category-container">
+                <div class="category-item">
+                    <i class="fas fa-gamepad"></i>
+                    <span>游戏</span>
+                </div>
+                <div class="category-item">
+                    <i class="fas fa-tv"></i>
+                    <span>动画</span>
+                </div>
+                <div class="category-item">
+                    <i class="fas fa-music"></i>
+                    <span>音乐</span>
+                </div>
+                <div class="category-item">
+                    <i class="fas fa-laugh"></i>
+                    <span>娱乐</span>
+                </div>
+                <div class="category-item">
+                    <i class="fas fa-film"></i>
+                    <span>影视</span>
+                </div>
+                <div class="category-item">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>知识</span>
+                </div>
+                <div class="category-item">
+                    <i class="fas fa-utensils"></i>
+                    <span>美食</span>
+                </div>
+                <div class="category-item">
+                    <i class="fas fa-car"></i>
+                    <span>汽车</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 视频推荐区域 -->
+        <section class="video-section">
+            <div class="section-header">
+                <h2>推荐视频</h2>
+                <a href="#" class="more-link">更多 <i class="fas fa-chevron-right"></i></a>
+            </div>
+            <div class="video-grid" id="videoGrid">
+                <!-- 视频卡片将通过JavaScript动态生成 -->
+            </div>
+        </section>
+
+        <!-- 热门排行榜 -->
+        <section class="ranking-section">
+            <div class="section-header">
+                <h2>热门排行榜</h2>
+                <a href="#" class="more-link">更多 <i class="fas fa-chevron-right"></i></a>
+            </div>
+            <div class="ranking-list" id="rankingList">
+                <!-- 排行榜将通过JavaScript动态生成 -->
+            </div>
+        </section>
+    </main>
+
+    <!-- 底部信息 -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>关于包站</h4>
+                <ul>
+                    <li><a href="#">关于我们</a></li>
+                    <li><a href="#">联系我们</a></li>
+                    <li><a href="#">加入我们</a></li>
+                    <li><a href="#">用户协议</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>帮助中心</h4>
+                <ul>
+                    <li><a href="#">常见问题</a></li>
+                    <li><a href="#">意见反馈</a></li>
+                    <li><a href="#">侵权投诉</a></li>
+                    <li><a href="#">隐私政策</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>友情链接</h4>
+                <ul>
+                    <li><a href="#">哔哩哔哩</a></li>
+                    <li><a href="#">AcFun</a></li>
+                    <li><a href="#">YouTube</a></li>
+                    <li><a href="#">抖音</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 包站. 保留所有权利.</p>
+        </div>
+    </footer>
+
+    <!-- 视频播放模态框 -->
+    <div class="video-modal" id="videoModal">
+        <div class="modal-content">
+            <span class="close-btn" id="closeModal">&times;</span>
+            <div class="video-player">
+                <video id="videoPlayer" controls>
+                    <source src="" type="video/mp4">
+                    您的浏览器不支持视频播放。
+                </video>
+            </div>
+            <div class="video-info">
+                <h3 id="videoTitle"></h3>
+                <div class="video-stats">
+                    <span id="videoViews"></span>
+                    <span id="videoDate"></span>
+                </div>
+                <p id="videoDescription"></p>
+            </div>
+            
+            <!-- 评论区 -->
+            <div class="comments-section">
+                <h4>评论区</h4>
+                <div class="comment-form">
+                    <textarea id="commentInput" placeholder="写下你的评论..." rows="3"></textarea>
+                    <button id="submitComment" class="comment-submit-btn">
+                        <i class="fas fa-paper-plane"></i>
+                        发表评论
+                    </button>
+                </div>
+                <div class="comments-list" id="commentsList">
+                    <!-- 评论将通过JavaScript动态生成 -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="about-modal" id="aboutModal">
+        <div class="about-modal-content">
+            <span class="about-close" id="aboutClose">&times;</span>
+            <h2>关于包站</h2>
+            <p>包站是一个仿照B站风格的免费视频分享平台，支持视频浏览、搜索、分类、排行榜、投稿等功能。<br>本项目为前端演示版，所有数据均为本地模拟，欢迎体验和二次开发！</p>
+            <ul>
+                <li>作者：AI助手</li>
+                <li>开源协议：MIT</li>
+                <li>项目地址：本地</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
